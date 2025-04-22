@@ -1,0 +1,290 @@
+<html lang="en">
+
+<head>
+  <title>Plexxity</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="assets/fonts/fonts.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="antialiased bg-body text-body font-body">
+  <div>
+    <section class="bg-gradient-to-b from-pink-400 via-pink-700 to-darkPink-900" x-data="{ mobileNavOpen: false }">
+      <div class="container mx-auto px-4">
+        <nav class="py-5 border-b border-white border-opacity-10">
+          <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between"><a href="#"><img width="150px" src="images/logo-white.png"
+                  alt="" /></a>
+              <div class="hidden lg:flex gap-2 p-1 rounded-full bg-white bg-opacity-10"><a
+                  class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200"
+                  href="#">Home</a><a
+                  class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200"
+                  href="#mission">About</a><a 
+                  class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200"
+                  href='m&#97;&#105;lto&#58;%7&#52;&#101;am&#64;%70%6Cexxi&#116;&#121;&#46;co%6&#68;'>Contact</a>
+                </div>
+                <!-- <a class="hidden lg:flex items-center gap-2 text-white hover:text-pink-500 transition duration-200"
+                href="login.html"><span class="text-sm font-medium">Sign in</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                  <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg></a> -->
+              <button class="lg:hidden" x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="56" height="56" rx="28" fill="white"></rect>
+                  <path d="M37 32H19M37 24H19" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div class="relative pt-24 pb-14"><img
+            class="hidden lg:block absolute left-16 xl:left-36 2xl:left-56 3xl:left-96 top-56"
+            src="assets/images/hero/stars-pattern1.svg" alt="" /><img
+            class="hidden lg:block absolute right-4 xl:right-36 2xl:right-56 3xl:right-96 top-56"
+            src="assets/images/hero/stars-pattern2.svg" alt="" />
+          <div class="relative z-50">
+            <h1
+              class="font-heading text-white text-center text-4xl sm:text-5xl md:text-7xl font-bold max-w-6xl mx-auto mb-6">
+              Find the best solution together.</h1>
+            <p class="text-center text-white max-w-xl mx-auto text-lg mb-12">We not only provide consultation but also
+              consider your thoughts to find the best solution for each and every solution.</p>
+            <div class="mb-40 text-center"><a
+                class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full" href="#mission">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full">
+                </div>
+                <div
+                  class="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200">
+                  <p class="text-pinkSecondary-900">Learn more</p>
+                </div></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50"
+        :class="{ 'hidden': !mobileNavOpen, 'block': mobileNavOpen }">
+        <div class="fixed inset-0 bg-black opacity-20" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
+        <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
+          <div class="flex items-center justify-between"><a class="inline-block" href="#"><img
+                src="images/logo-black.png" width="150px" alt="" /></a>
+            <button x-on:click="mobileNavOpen = !mobileNavOpen">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <ul class="flex flex-col gap-12 py-12 my-12">
+            <li><a class="text-sm font-medium" href="index.html">Home</a></li>
+            <li><a class="text-sm font-medium" href="#mission">About</a></li>
+            <li><a class="text-sm font-medium" href='m&#97;&#105;lto&#58;%7&#52;&#101;am&#64;%70%6Cexxi&#116;&#121;&#46;co%6&#68;'>Contact</a></li>
+          </ul>
+          <!-- <div class="text-center"><a
+              class="inline-flex items-center gap-2 text-black hover:text-opacity-80 transition duration-200"
+              href="login.html"><span class="text-sm font-medium">Sign in</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg></a></div> -->
+        </nav>
+      </div>
+    </section>
+    <section class="py-24 bg-darkPink-900 -mt-20">
+      <div id="mission" class="container mx-auto px-14">
+        <div class="flex flex-wrap -m-4 ">
+          <div class="w-full lg:w-1/2 p-4">
+            <div class="rounded-3xl p-4 bg-gradient-to-b from-darkPink-300 via-pink-700 to-darkPink-900 h-full">
+              <div class="rounded-2xl bg-darkPink-900 p-12 h-full">
+                <div class="flex items-center flex-wrap gap-4 mb-6"><img class="h-8" src="assets/images/logos/vista-logo-small.svg" alt=""/>
+                  <p class="uppercase text-white text-opacity-70 text-lg font-medium">OUR MISSION</p>
+                </div>
+                <p class="text-white text-2xl font-semibold max-w-md">We're making expert cyber security accessible to empower businesses to operate safely.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 p-4">
+            <div class="rounded-3xl p-4 bg-gradient-to-b from-pink-300 via-pink-700 to-darkPink-900 h-full">
+              <div class="rounded-2xl bg-darkPink-900 p-12 h-full">
+                <div class="flex flex-wrap justify-between gap-6">
+                  <div>
+                    <div class="rounded-full border border-pink-500 w-12 h-12 flex items-center justify-center mb-6">
+                      <div class="bg-pinkSecondary-900 w-10 h-10 rounded-full border border-white border-opacity-10 flex items-center justify-center"><img class="h-6" src="assets/images/about/flag.svg" alt=""/></div>
+                    </div>
+                    <p class="text-white text-4xl font-bold mb-1">2024</p>
+                    <p class="text-white text-opacity-70">Founded in</p>
+                  </div>
+                  <div>
+                    <div class="rounded-full border border-pink-500 w-12 h-12 flex items-center justify-center mb-6">
+                      <div class="bg-pinkSecondary-900 w-10 h-10 rounded-full border border-white border-opacity-10 flex items-center justify-center"><img class="h-6" src="assets/images/about/people.svg" alt=""/></div>
+                    </div>
+                    <p class="text-white text-4xl font-bold mb-1">~40%</p>
+                    <p class="text-white text-opacity-70">Reduced risk</p>
+                  </div>
+                  <div>
+                    <div class="rounded-full border border-pink-500 w-12 h-12 flex items-center justify-center mb-6">
+                      <div class="bg-pinkSecondary-900 w-10 h-10 rounded-full border border-white border-opacity-10 flex items-center justify-center"><img class="h-6" src="assets/images/about/global.svg" alt=""/></div>
+                    </div>
+                    <p class="text-white text-4xl font-bold mb-1">100%</p>
+                    <p class="text-white text-opacity-70">Tailored solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-darkPink-900 py-24">
+
+      <div class="container mx-auto px-4">
+        <p class="uppercase text-sweetPink-400 text-xs tracking-widest mb-4">CONSULTANCY</p>
+        <h1 class="font-heading text-white text-4xl md:text-5xl font-bold mb-4">Expert analysis and tailored strategies</h1>
+        <p class="text-white text-opacity-70 text-lg max-w-xl mb-20">Leverage our specialised knowledge to navigate the complex security landscape, freeing up your resources to drive business growth.</p>
+        <div class="bg-pinkSecondary-900 rounded-3xl mb-20">
+          <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2">
+              <div class="rounded-3xl p-28 h-full relative" style="background:linear-gradient(to top, #bf114a 10%,  #1f0a0f 85%);">
+                <canvas id="chart"></canvas>
+              </div>
+              
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="px-8 py-12 md:py-20 flex flex-col justify-center items-start h-full"><a class="inline-block text-white text-3xl font-bold mb-4 max-w-md hover:underline" href="#">From Assessment to Actionable Strategy     </a>
+                <p class="text-white text-opacity-70 mb-10 max-w-lg">Our consultancy process translates detailed security assessments into clear, prioritised recommendations. We focus on providing actionable insights that directly address your unique risk profile and enhance your overall security posture.</p>
+                <div class="flex"> 
+                  <span class="px-2 py-1 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-md text-white text-xs font-medium mr-2">Strategy</span>
+                  <span class="px-2 py-1 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-md text-white text-xs font-medium">Risk Management</span>
+                </div> 
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -m-4 lg:mb-16">
+          <div class="w-full lg:w-1/3 p-4">
+            <div class=" p-px">
+              <div class="bg-darkPink-900 rounded-2xl p-8"><img class="h-6 mb-6" src="assets/images/careers/wallet.svg" alt=""/>
+                <p class="text-white text-lg font-semibold mb-2">Focused Expertise</p>
+                <p class="text-white text-opacity-70 max-w-xs">Applying specialised knowledge and up-to-date insights to navigate the complexities of the cyber threat landscape.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 p-4">
+            <div class=" p-px">
+              <div class="bg-darkPink-900 rounded-2xl p-8"><img class="h-6 mb-6" src="assets/images/careers/weight.svg" alt=""/>
+                <p class="text-white text-lg font-semibold mb-2">Tailored Approach</p>
+                <p class="text-white text-opacity-70 max-w-xs">Developing security solutions and advice specifically adapted to your operational context, objectives, and requirements.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 p-4">
+            <div class="bg-gradient-to-b from-pink-300 via-pink-700 to-darkPink-900 rounded-2xl p-px">
+              <div class="bg-darkPink-900 rounded-2xl p-8"><img class="h-6 mb-6" src="assets/images/careers/global.svg" alt=""/>
+                <p class="text-white text-lg font-semibold mb-2">Clear, Objective Guidance</p>
+                <p class="text-white text-opacity-70 max-w-xs">Delivering independent, straightforward advice focused on practical steps to improve your cyber security resilience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-darkPink-900">
+      <div class="bg-pinkSecondary-900 rounded-3xl py-20 px-4">
+        <p class="uppercase text-center text-sweetPink-400 tracking-widest text-xs mb-4">CONTACT US</p>
+        <h2 class="font-heading text-white text-center text-4xl md:text-5xl font-bold mb-4">Ready to talk?</h2>
+        <p class="text-white text-opacity-70 mb-10 text-center max-w-4xl mx-auto">Initiate a conversation with us to thoroughly discuss the unique cyber security challenges facing your organisation. We focus on understanding your operational context to explore practical, effective solutions and strategies together.</p>
+        <div class="flex justify-center"><a class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full shadow-pink" href='m&#97;&#105;lto&#58;%7&#52;&#101;am&#64;%70%6Cexxi&#116;&#121;&#46;co%6&#68;'>
+            <div class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full"></div>
+            <div class="relative z-50 flex items-center py-3 px-5 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200">
+              <p class="text-pinkSecondary-900">Request Consultation</p>
+            </div></a></div>
+      </div>
+    </section>
+
+    <section class="bg-darkPink-900 py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center flex-wrap gap-6">
+          <p class="text-white">© 2025. Plexxity Ltd. All rights reserved.</p>
+          <!-- <div class="flex flex-wrap gap-6"><a href="#"><img src="assets/images/logos/twitter-x-logo.svg"
+                alt="" /></a> <a href="#"><img src="assets/images/logos/linkedin-logo.svg" alt="" /></a> <a
+              href="#"><img src="assets/images/logos/instagram-logo.svg" alt="" /></a> <a href="#"><img
+                src="assets/images/logos/facebook-logo.svg" alt="" /></a></div>
+        </div> -->
+      </div>
+    </section>
+    <script>
+        const ctx = document.getElementById('chart');
+
+
+
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [65, 59, 80, 81, 56, 55, 40],
+            datasets: [{
+              label: '# of Votes',
+              data: [3, 2, 5, 3, 19, 18, 19, 25],
+              fill: false,
+              backgroundColor: 'rgba(0, 0, 0, 0.1',
+              borderColor: 'rgba(255, 255, 255, 0.7)',
+              tension: 0.2,
+            }]
+          },
+          options: {
+            
+            layout: {
+            padding: 20,
+            responsive: false,
+            maintainAspectRatio: false,
+            animations: {
+              tension: {
+                duration: 1000,
+                easing: 'linear',
+                from: 1,
+                to: 0
+              }
+            }
+          },
+            scales: {
+              y: {
+                beginAtZero: true,
+                display: false,
+                grid: {
+                  display: false
+                }
+              },
+              x: {
+                display: false,
+                grid: {
+                  display: false
+                }
+              }
+            },
+            plugins: {
+              tooltip: {
+                enabled: false
+              },
+              legend: {
+                display: false
+              }
+            }
+          }
+        });
+    </script>
+</body>
+
+</html>
